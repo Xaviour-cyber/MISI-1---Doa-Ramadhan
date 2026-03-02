@@ -1,0 +1,69 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.header-bg {
+    background: linear-gradient(175deg, #0a2e18 0%, #14532d 60%, #166534 100%);
+}
+
+.niat-card {
+    background: linear-gradient(160deg, #14532d, #0f4425);
+    box-shadow: 0 20px 60px -15px rgba(10, 46, 24, 0.4);
+}
+
+.buka-card {
+    background: linear-gradient(160deg, #78350f, #92400e);
+    box-shadow: 0 20px 60px -15px rgba(120, 53, 15, 0.35);
+}
+
+.tab-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-label {
+    background: transparent;
+    border: 1.5px solid #d6d3d1;
+    color: #a8a29e;
+}
+
+#tab-sahur:checked~* .tab-sahur-label,
+#tab-sahur:checked~.tab-sahur-label {
+    background: #14532d;
+    border-color: #14532d;
+    color: #ffffff;
+}
+
+#tab-sahur:checked~.tab-panel-sahur {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+}
+
+#tab-buka:checked~* .tab-buka-label,
+#tab-buka:checked~.tab-buka-label {
+    background: #92400e;
+    border-color: #92400e;
+    color: #ffffff;
+}
+
+#tab-buka:checked~.tab-panel-buka {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
