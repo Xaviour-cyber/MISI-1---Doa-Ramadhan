@@ -1,0 +1,64 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.header-bg {
+    background: linear-gradient(175deg, #0a2e18 0%, #14532d 60%, #166534 100%);
+}
+
+.btn-pop {
+    animation: btnPop 0.2s ease-out;
+}
+
+@keyframes btnPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.badge-notif {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.badge-show {
+    opacity: 1;
+    transform: translateY(0);
+    animation: badgeIn 0.5s ease-out;
+}
+
+@keyframes badgeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.btn-target {
+    background: transparent;
+    border: 1.5px solid #d6d3d1;
+    color: #a8a29e;
+}
+
+.btn-target.target-active {
+    background: #14532d;
+    border-color: #14532d;
+    color: #ffffff;
+}
+
+.progress-ring circle {
+    transition: stroke-dashoffset 0.35s ease, stroke 0.35s ease;
+}
